@@ -10,8 +10,7 @@ function Navbar() {
       <div className="left">
         <a href="/" className="logo">
           <img src="/logo.png" alt="" />
-          <span>Krist</span>
-          <span>Real Estate</span>
+          <span>Krist Immo</span>
         </a>
         <a href="/">Home</a>
         <a href="/">About</a>
@@ -19,9 +18,9 @@ function Navbar() {
         <a href="/">Agents</a>
       </div>
       <div className="right">
-        <a href="/">Sign in</a>
+        <a href="/">Se connecter</a>
         <a href="/" className="register">
-          Sign up
+          S'inscrire
         </a>
 
         <div className="menuIcon">
@@ -36,8 +35,8 @@ function Navbar() {
           <a href="/">About</a>
           <a href="/">Contact</a>
           <a href="/">Agents</a>
-          <a href="/">Sign in</a>
-          <a href="/">Sign up</a>
+          <a href="/">Se connecter</a>
+          <a href="/">S'inscrire</a>
         </div>
       </div>
     </nav>
