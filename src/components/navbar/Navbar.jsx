@@ -11,15 +11,16 @@ function Navbar() {
         <a href="/" className="logo">
           <img src="/logo.png" alt="" />
           <span>Krist Immo</span>
+          <img src="/cameroon flag.png" alt="cameroon flag" />
         </a>
         <a href="/">Home</a>
-        <a href="/">About</a>
-        <a href="/">Contact</a>
-        <a href="/">Agents</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+        <a href="/agents">Agents</a>
       </div>
       <div className="right">
-        <a href="/">Se connecter</a>
-        <a href="/" className="register">
+        <a href="/login">Se connecter</a>
+        <a href="/register" className="register">
           S'inscrire
         </a>
 
@@ -32,11 +33,11 @@ function Navbar() {
         </div>
         <div className={open ? "menu active" : "menu"}>
           <a href="/">Home</a>
-          <a href="/">About</a>
-          <a href="/">Contact</a>
-          <a href="/">Agents</a>
-          <a href="/">Se connecter</a>
-          <a href="/">S'inscrire</a>
+          <a href="/about">About</a>
+          <a href="/contact">Contact</a>
+          <a href="/agents">Agents</a>
+          <a href="/login">Se connecter</a>
+          <a href="/register">S'inscrire</a>
         </div>
       </div>
     </nav>

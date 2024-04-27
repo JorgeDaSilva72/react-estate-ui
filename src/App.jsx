@@ -1,18 +1,62 @@
-import Navbar from "./components/navbar/Navbar";
-import "./layout.scss";
 import HomePage from "./routes/homePage/homePage";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import ListPage from "./routes/listPage/listPage";
+import Layout from "./routes/layout/layout";
+import SinglePage from "./routes/singlePage/singlePage";
+import ProfilePage from "./routes/profilePage/profilePage";
+import Login from "./routes/login/login";
+import Register from "./routes/register/register";
+import AboutPage from "./routes/aboutPage/aboutPage";
+import ContactPage from "./routes/contactPage/contactPage";
+import AgentsPage from "./routes/agentsPage/agentsPage";
 
 function App() {
-  return (
-    <div className="layout">
-      <div className="navbar">
-        <Navbar />
-      </div>
-      <div className="content">
-        <HomePage />
-      </div>
-    </div>
-  );
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Layout />,
+      children: [
+        {
+          path: "/",
+          element: <HomePage />,
+        },
+        {
+          path: "/list",
+          element: <ListPage />,
+        },
+        {
+          path: "/:id",
+          element: <SinglePage />,
+        },
+        {
+          path: "/profile",
+          element: <ProfilePage />,
+        },
+        {
+          path: "/login",
+          element: <Login />,
+        },
+        {
+          path: "/register",
+          element: <Register />,
+        },
+        {
+          path: "/about",
+          element: <AboutPage />,
+        },
+        {
+          path: "/contact",
+          element: <ContactPage />,
+        },
+        {
+          path: "/agents",
+          element: <AgentsPage />,
+        },
+      ],
+    },
+  ]);
+
+  return <RouterProvider router={router} />;
 }
 
 export default App;
