@@ -63,11 +63,11 @@ function SinglePage() {
             </div>
             <div className="size">
               <img src="/bed.png" alt="" />
-              <span>{singlePostData.bedroom} lits</span>
+              <span>{singlePostData.bedroom} chambre(s)</span>
             </div>
             <div className="size">
               <img src="/bath.png" alt="" />
-              <span>{singlePostData.bathroom} salle de bain</span>
+              <span>{singlePostData.bathroom} salle(s) de bain</span>
             </div>
           </div>
           <p className="title">Lieux à proximité</p>
