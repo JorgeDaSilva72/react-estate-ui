@@ -14,7 +14,7 @@ function Filter() {
       </div>
       <div className="bottom">
         <div className="item">
-          <label htmlFor="type">Type</label>
+          <label htmlFor="type">Action</label>
           <select name="type" id="type">
             <option value="">Aucune</option>
             <option value="buy">Acheter</option>
@@ -22,7 +22,7 @@ function Filter() {
           </select>
         </div>
         <div className="item">
-          <label htmlFor="property">Le bien</label>
+          <label htmlFor="property">Bien Immobilier</label>
           <select name="property" id="property">
             <option value="">Aucune</option>
             <option value="apartment">Appartement</option>
