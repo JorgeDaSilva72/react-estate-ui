@@ -1,6 +1,6 @@
 import { useState } from "react";
-
 import "./navbar.scss";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [open, setOpen] = useState(false);
@@ -9,20 +9,20 @@ function Navbar() {
     <nav>
       <div className="left">
         <a href="/" className="logo">
-          <img src="/logo.png" alt="" />
+          <img src="/logo.png" alt="logo" />
           <span>Krist Immo</span>
           <img src="/cameroon flag.png" alt="cameroon flag" />
         </a>
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
-        <a href="/agents">Agents</a>
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+        <Link to="/contact">Contact</Link>
+        <Link to="/agents">Agents</Link>
       </div>
       <div className="right">
-        <a href="/login">Se connecter</a>
-        <a href="/register" className="register">
+        <Link to="/login">Se connecter</Link>
+        <Link to="/register" className="register">
           S'inscrire
-        </a>
+        </Link>
 
         <div className="menuIcon">
           <img
@@ -32,12 +32,12 @@ function Navbar() {
           />
         </div>
         <div className={open ? "menu active" : "menu"}>
-          <a href="/">Home</a>
-          <a href="/about">About</a>
-          <a href="/contact">Contact</a>
-          <a href="/agents">Agents</a>
-          <a href="/login">Se connecter</a>
-          <a href="/register">S'inscrire</a>
+          <Link to="/">Home</Link>
+          <Link to="/about">About</Link>
+          <Link to="/contact">Contact</Link>
+          <Link to="/agents">Agents</Link>
+          <Link to="/login">Se connecter</Link>
+          <Link to="/register">S'inscrire</Link>
         </div>
       </div>
     </nav>
