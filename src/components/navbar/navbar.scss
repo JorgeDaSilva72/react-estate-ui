@@ -6,23 +6,22 @@ nav {
   justify-content: space-between;
   align-items: center;
 
-  a {
-    transition: all 0.4s ease;
-
-    @include sm {
-      display: none;
-    }
-
-    &:hover {
-      scale: 1.05;
-    }
-  }
-
   .left {
     flex: 3;
     display: flex;
     align-items: center;
     gap: 50px;
+    a {
+      transition: all 0.4s ease;
+
+      @include sm {
+        display: none;
+      }
+
+      &:hover {
+        scale: 1.05;
+      }
+    }
 
     .logo {
       font-weight: bold;
@@ -60,7 +59,11 @@ nav {
 
     a {
       padding: 12px 24px;
-      margin: 20px;
+      margin: 0px;
+
+      @include sm {
+        margin: 10px;
+      }
     }
 
     .user {
@@ -74,6 +77,9 @@ nav {
         border-radius: 50%;
         object-fit: cover;
         margin-right: 20px;
+        @include sm {
+          margin-right: 0px;
+        }
       }
 
       .name {
