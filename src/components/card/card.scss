@@ -4,13 +4,17 @@
   display: flex;
   gap: 20px;
 
+  @include sm {
+    flex-direction: column-reverse;
+  }
+
   .imageContainer {
     flex: 2;
     height: 200px;
 
-    @include md {
-      display: none;
-    }
+    // @include md {
+    //   display: none;
+    // }
 
     img {
       width: 100%;

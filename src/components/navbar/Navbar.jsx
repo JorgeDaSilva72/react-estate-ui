@@ -28,7 +28,7 @@ function Navbar() {
             <span className="name">Herve Krist</span>
             <Link to="/profile" className="profile">
               <div className="notification">3</div>
-              <span>Profile</span>
+              <span>Profil</span>
             </Link>
           </div>
         ) : (
