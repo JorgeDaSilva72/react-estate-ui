@@ -1,27 +1,49 @@
 import Chat from "../../components/chat/Chat";
 import List from "../../components/list/List";
 import "./profilePage.scss";
+import apiRequest from "../../lib/apiRequest";
+import { Link, useNavigate } from "react-router-dom";
+import { useContext } from "react";
+
+import { AuthContext } from "../../context/AuthContext";
 
 function ProfilePage() {
+  const { updateUser, currentUser } = useContext(AuthContext);
+
+  const navigate = useNavigate();
+
+  const handleLogout = async () => {
+    try {
+      await apiRequest.post("/auth/logout");
+      updateUser(null);
+      navigate("/");
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   return (
     <div className="profilePage">
       <div className="details">
         <div className="wrapper">
           <div className="title">
             <h1>Informations Utilisateur</h1>
-            <button>Mettre à jour son profil</button>
+            <Link to="/profile/update">
+              <button>Mettre à jour son profil</button>
+            </Link>
           </div>
           <div className="info">
             <span>
-              Avatar:
-              <img src="/herveKrist.jpg" alt="" />
+              Votre Avatar:
+              <img src={currentUser.avatar || "noavatar.jpg"} alt="" />
             </span>
             <span>
-              Username: <b>Herve Krist</b>
+              Votre nom d'utilisateur: <b>{currentUser.username}</b>
             </span>
             <span>
-              E-mail: <b>herve.krist@gmail.com</b>
+              Votre e-mail: <b>{currentUser.email}</b>
             </span>
+            <button onClick={handleLogout}>Logout</button>
           </div>
           <div className="title">
             <h1>Mes annonces</h1>
